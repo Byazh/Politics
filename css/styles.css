@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.body {
+    margin: 0;
+}
+
+#menu_obscurer {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#menu_close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+#menu {
+    position: fixed;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    z-index: 1;
+    background-color: #52a9cf;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu_title {
+    font-family: "Euclid Circular B", sans-serif;
+    display: block;
+    padding: 8px 8px 32px 32px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+#background {
+    background-image: url("../assets/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-y: hidden;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 25vw;
+    max-width: 275px;
+    max-height: 325px;
+    min-width: 150px;
+    min-height: 185px;
+}
+
+#title {
+    font-family: "Euclid Circular B", serif;
+    font-weight: bolder;
+    font-size: max(40px, 3vw);
+    margin-bottom: 4%;
+    margin-left: 18%;
+    white-space: nowrap;
+}
+
+#subtitle {
+    font-family: "Euclid Circular B", serif;
+    font-weight: normal;
+    font-size: max(23px, 1.5vw);
+    margin-left: 18%;
+    white-space: nowrap;
+}
+
+#buttons {
+    display: grid;
+    max-width: max(50%, 700px);
+    margin-top: min(20%, 100px);
+    margin-right: auto;
+    margin-left: auto;
+    justify-items: center;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+.button_container {
+    display: flex;
+    height: max(11vh, 75px);
+    margin: 0 25px max(40px, 4vh) 0;
+}
+
+.button {
+    position: absolute;
+    width: max(14vw, 175px);
+    height: max(7vh, 60px);
+    margin-left: 10px;
+    background-color: #D4F2FF;
+    border-color: transparent;
+    box-shadow: -5px 5px 5px rgb(0, 0, 0, 0.1);
+    transition-duration: 100ms;
+}
+
+.button:hover {
+    transform: translate(-10px, 15px);
+}
+
+.button_icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+.button_text {
+    display: inline-flex;
+    font-family: "Euclid Circular B", sans-serif;
+    font-weight: bold;
+    font-size: min(16px, 2.3vw);
+    color: rgb(0, 0, 0, 0.75);
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+.button_back {
+    width: max(14vw, 175px);
+    height: max(7vh, 60px);
+    margin-top: 15px;
+    background-color: white;
+    alignment: bottom;
+    box-shadow: -5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.below_button {
+    display: block;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: min(30px, 4vh);
+    opacity: 0.3;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.divider {
+    width: 70%;
+    height: 2px;
+    margin-top: 5vh;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+#controversies_container {
+    margin-left: max(27%, 15px);
+    margin-right: max(27%, 15px);
+    margin-top: 5%;
+}
+
+.topic {
+    font-family: "Euclid Circular B", serif;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: left;
+}
+
+.topic_title {
+    font-family: "Euclid Circular B", serif;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 5vh;
+    margin-left: 33px;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.info {
+    position: absolute;
+    width: 23px;
+    opacity: 0.75;
+    margin-left: 3px;
+    margin-top: 5vh;
+}
+
+.description {
+    font-family: "Euclid Circular B", serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    margin-top: 40px;
+    color: rgb(0, 0, 0, 0.75);
+}
+
+.question_container {
+    background-color: rgb(102, 200, 255, 0.2);
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    border: 2.5px outset rgba(54, 151, 208, 0.58);
+    padding-left: 33px;
+    padding-right: 33px;
+    text-align: center;
+    box-shadow: 15px 15px 15px rgb(0, 0, 0, 0.2);
+}
+
+.question_text {
+    font-family: "Euclid Circular B", serif;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 5vh;
+    color: rgb(0, 0, 0, 0.8);
+}
+
+.yes_button {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    width: 10vw;
+    height: 4vh;
+    background-color: rgb(15, 162, 0, 0.3);
+    border: 2px outset rgb(15, 162, 0, 1);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+    font-family: "Euclid Circular B", sans-serif;
+    letter-spacing: 1px;
+}
+
+.no_button {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    width: 10vw;
+    height: 4vh;
+    background-color: rgba(185, 0, 0, 0.42);
+    border: 2px outset rgba(185, 0, 0, 1);
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+    font-family: "Euclid Circular B", sans-serif;
+    letter-spacing: 1px;
+}
+
+.menu {
+    width: 30px;
+    position: absolute;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}
+
+.divider_party_green {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    height: 6px;
+    border-radius: 30px;
+    background-color: rgba(5, 114, 0, 0.5);
+
+}
+
+.divider_party_red {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    height: 6px;
+    border-radius: 30px;
+    background-color: rgba(255, 0, 0, 0.5);
+
+}
+
+.divider_party {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    height: 6px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.16);
+
+}
+
+.party {
+    font-family: "Euclid Circular B", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.statement {
+    font-family: "Euclid Circular B", sans-serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0, 0.75);
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.hide {
+    display: none;
+}
+
+.show_more {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(15, 162, 0, 0);
+    border: 2px outset rgba(47, 139, 243, 0);
+    font-family: "Euclid Circular B", sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+#p_row1 {
+    position: relative;
+    top: min(225px, 6vw);
+    right: min(125px, 5vw);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#p_row2 {
+    position: absolute;
+    bottom: min(225px, 6vw);
+    left: min(125px, 5vw);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#avatar1 {
+    width: min(325px, 45vw);
+    position: absolute;
+    right: min(125px, 5vw);
+}
+
+#avatar2 {
+    width: min(325px, 45vw);
+    margin-left: min(125px, 5vw);
+}
+
+.person_name {
+    font-family: "Euclid Circular B", sans-serif;
+    font-weight: bolder;
+    font-size: min(5vw, 65px);
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-bottom: 25px;
+}
+
+#pn1 {
+    text-align: right;
+    margin-right: min(400px, 40vw)
+}
+
+#pd1 {
+    text-align: right;
+    margin-left: min(700px, 15vw);
+    margin-right: min(400px, 40vw)
+}
+
+#pn2 {
+
+}
+
+#pd2 {
+    margin-right: min(700px, 15vw);
+}
+
+.person_description {
+    font-family: "Euclid Circular B", sans-serif;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    color: rgb(0, 0, 0, 0.8);
+
+}
+
+
+@media (max-width:800px)  {
+
+    #background {
+        background-image: url("../assets/images/background-small.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .row {
+        display: block;
+        text-align: center;
+    }
+
+    #logo {
+        width: 20vw;
+        max-width: 275px;
+        max-height: 325px;
+        min-width: 150px;
+        min-height: 180px;
+    }
+
+    #title {
+        font-size: max(35px, 2.75vw);
+        font-weight: bolder;
+        font-family: "Euclid Circular B", serif;
+        white-space: nowrap;
+        margin-left: auto;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
+
+    }
+
+    #subtitle {
+        font-size: max(17px, 1.5vw);
+        font-weight: normal;
+        margin-left: auto;
+        font-family: "Euclid Circular B", serif;
+        margin-bottom: 0;
+    }
+
+    .button_container {
+        display: flex;
+        margin-bottom: max(20px, 1.5vh);
+    }
+
+    #buttons {
+        max-width: 80%;
+        display: grid;
+        margin-left: 10%;
+        margin-top: 8%;
+        justify-items: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .button {
+        width: max(15vw, 350px);
+        height: max(5vh, 50px);
+        border-color: transparent;
+        background-color: #D4F2FF;
+        margin-left: 10px;
+
+    }
+
+    .button_back {
+        width: max(15vw, 350px);
+        height: max(5vh, 50px);
+        background-color: white;
+        alignment: bottom;
+        box-shadow: -5px 5px 10px rgb(0, 0, 0, 0.3);
+    }
+
+    .below_button {
+        width: 0;
+        opacity: 0;
+
+    }
+
+    #controversies_container {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 5%;
+    }
+
+    #p_row1 {
+        display: block;
+        right: 0;
+        left: 0;
+        position: relative;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    #p_row2 {
+        display: block;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        position: relative;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    #avatar1 {
+        width: min(300px, 40vw);
+        position: relative;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        right: 0;
+        left: 0;
+        margin-top: 5vh;
+    }
+
+    #avatar2 {
+        width: min(300px, 40vw);
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        position: relative;
+        margin-top: 15vh;
+    }
+
+    .person_name {
+        font-family: "Euclid Circular B", sans-serif;
+        font-weight: bolder;
+        font-size: min(5vw, 65px);
+        text-align: center;
+    }
+
+    #pn1 {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        margin-top: 3vh;
+    }
+
+    #pd1 {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        margin-top: 3vh;
+    }
+
+    #pn2 {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        margin-top: 3vh;
+    }
+
+    #pd2 {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        margin-top: 3vh;
+        margin-bottom: 5vh;
+    }
+
+    .person_description {
+        font-family: "Euclid Circular B", sans-serif;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        position: relative;
+        color: rgb(0, 0, 0, 0.8);
+    }
+
+
+    @media (max-height: 750px) {
+
+        #p_row2 {
+            display: block;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            position: relative;
+
+        }
+    }
+}
+
+
+
+

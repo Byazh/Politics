@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <title>Compasso politico</title>
+</head>
+<body class="body">
+
+  <img class="menu" alt="menu" src="assets/images/menu.png" onclick="openNav()">
+  <div id="menu">
+    <a href="javascript:void(0)" id="menu_close" onclick="closeNav()">&times;</a>
+    <a class="menu_title" href="index.html">🏠 Home</a>
+    <a class="menu_title" href="pages/about.html">🧍 Chi siamo</a>
+  </div>
+
+  <div id="background">
+    <div class="row" style="margin-top: min(20%, 50px)">
+        <img src="assets/images/logo.png" id="logo" alt="logo">
+        <div>
+            <p id="title">
+                Non sai chi<br>votare?
+            </p>
+            <p id="subtitle">
+                Scopri quale partito più<br>ti rappresenta!
+            </p>
+        </div>
+        <div style="width: 7vw; height: 0;"></div>
+    </div>
+    <div id="buttons">
+        <div class="button_container">
+            <a href="#topic_immigrazione">
+                <button class="button">
+                    <img class="button_icon" src="assets/images/passport.png" alt="icon">
+                    <p class="button_text center">&nbsp;&nbsp;&nbsp;Immigrazione</p>
+                </button>
+            </a>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/environment.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Ambiente</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/protest.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Diritti</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/cash.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Economia</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/home.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Politica interna</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/pills.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Droghe leggere</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/travelling.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Politica estera</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/vaccine.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Pandemia</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+        <div class="button_container">
+            <button class="button">
+                <img class="button_icon" src="assets/images/more.png" alt="icon">
+                <p class="button_text center">&nbsp;&nbsp;&nbsp;Altro</p>
+            </button>
+            <div class="button_back"></div>
+        </div>
+    </div>
+    <img class="below_button" src="assets/images/down.png" alt="down">
+  </div>
+
+  <div class="divider"></div>
+
+  <div id="controversies_container">
+    <p id="topic_immigrazione" class="topic">
+        Immigrazione
+    </p>
+    <div>
+        <img src="assets/images/info.png" class="info" alt="info">
+        <div class="topic_title">
+            &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Immigrazione clandestina</span>
+        </div>
+    </div>
+    <div class="description">
+        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+    </div>
+    <div class="question_container">
+        <p class="question_text">L'Italia dovrebbe chiudere i porti agli immigrati clandestini?</p>
+        <button class="yes_button" id="i1y" onclick="show(true, 'i1')">Si</button>
+        <div style="width: min(10vw, 100px); display: inline-block"></div>
+        <button class="no_button" id="i1n" onclick="show(false, 'i1')">No</button>
+        <div class="hide" id="i1">
+            <div id="i1yes">
+                <p class="party">Fratelli d'Italia</p>
+                <div class="divider_party_green"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+                <p class="party">Partito Democratico</p>
+                <div class="divider_party_green"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+                <p class="party">Lega</p>
+                <div class="divider_party_green"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            </div>
+            <div id="i1no">
+                <p class="party">Movimento 5 Stelle</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+                <p class="party">Forza Italia</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+                <p class="party">Azione+Europa</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+                <p class="party">Italia Viva</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img src="assets/images/info.png" class="info" alt="info">
+        <div class="topic_title">
+            &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Immigrazione clandestina</span>
+        </div>
+    </div>
+    <div class="description">
+        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+    </div>
+    <div class="question_container">
+        <button class="show_more" id="i2b" onclick="showMore('i2')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+        <div class="hide" id="i2">
+            <p class="party">Fratelli d'Italia</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <p class="party">Partito Democratico</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <p class="party">Lega</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <p class="party">Movimento 5 Stelle</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <p class="party">Forza Italia</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <p class="party">Azione+Europa</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <p class="party">Italia Viva</p>
+            <div class="divider_party"></div>
+            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+        </div>
+    </div>
+</div>
+<div id="menu_obscurer"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel" src="index.js"></script>
+
+</body>
+
+</html>
