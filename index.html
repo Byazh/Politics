@@ -2,18 +2,21 @@
 <html lang="it">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
-    <title>Compasso politico</title>
+    <meta name="theme-color" content="#52a9cf" />
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Bussola politica</title>
 </head>
 <body class="body">
-
-  <img class="menu" alt="menu" src="assets/images/menu.png" onclick="openNav()">
+  <img class="menu" alt="menu" style="margin-left: 25px; margin-top: 25px" src="assets/images/menu.png" onclick="openNav()">
   <div id="menu">
     <a href="javascript:void(0)" id="menu_close" onclick="closeNav()">&times;</a>
     <a class="menu_title" href="index.html">🏠 Home</a>
+    <a class="menu_title" href="pages/parties.html">🗳️ Partiti</a>
     <a class="menu_title" href="pages/about.html">🧍 Chi siamo</a>
+    <a class="menu_title" href="pages/contact.html">📧 Contattaci</a>
   </div>
 
   <div id="background">
@@ -27,7 +30,7 @@
                 Scopri quale partito più<br>ti rappresenta!
             </p>
         </div>
-        <div style="width: 7vw; height: 0;"></div>
+        <div style="width: 5vw; height: 0;"></div>
     </div>
     <div id="buttons">
         <div class="button_container">
@@ -40,68 +43,61 @@
             <div class="button_back"></div>
         </div>
         <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/environment.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Ambiente</p>
-            </button>
-            <div class="button_back"></div>
+            <a href="#topic_diritti">
+                <button class="button">
+                    <img class="button_icon" src="assets/images/protest.png" alt="icon">
+                    <p class="button_text center">&nbsp;&nbsp;&nbsp;Diritti</p>
+                </button>
+                <div class="button_back"></div>
+            </a>
         </div>
         <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/protest.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Diritti</p>
-            </button>
-            <div class="button_back"></div>
+            <a href="#topic_economia">
+                <button class="button">
+                    <img class="button_icon" src="assets/images/cash.png" alt="icon">
+                    <p class="button_text center">&nbsp;&nbsp;&nbsp;Economia</p>
+                </button>
+                <div class="button_back"></div>
+            </a>
         </div>
         <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/cash.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Economia</p>
-            </button>
-            <div class="button_back"></div>
+            <a href="#topic_ambiente">
+                <button class="button">
+                    <img class="button_icon" src="assets/images/environment.png" alt="icon">
+                    <p class="button_text center">&nbsp;&nbsp;&nbsp;Ambiente</p>
+                </button>
+                <div class="button_back"></div>
+            </a>
         </div>
         <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/home.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Politica interna</p>
-            </button>
-            <div class="button_back"></div>
+            <a href="#topic_interna">
+                <button class="button">
+                    <img class="button_icon" src="assets/images/home.png" alt="icon">
+                    <p class="button_text center">&nbsp;&nbsp;&nbsp;Politica interna</p>
+                </button>
+                <div class="button_back"></div>
+            </a>
         </div>
         <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/pills.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Droghe leggere</p>
-            </button>
-            <div class="button_back"></div>
+            <a href="#topic_estera">
+                <button class="button">
+                    <img class="button_icon" src="assets/images/travelling.png" alt="icon">
+                    <p class="button_text center">&nbsp;&nbsp;&nbsp;Politica estera</p>
+                </button>
+                <div class="button_back"></div>
+            </a>
         </div>
-        <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/travelling.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Politica estera</p>
-            </button>
-            <div class="button_back"></div>
-        </div>
-        <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/vaccine.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Pandemia</p>
-            </button>
-            <div class="button_back"></div>
-        </div>
-        <div class="button_container">
-            <button class="button">
-                <img class="button_icon" src="assets/images/more.png" alt="icon">
-                <p class="button_text center">&nbsp;&nbsp;&nbsp;Altro</p>
-            </button>
-            <div class="button_back"></div>
-        </div>
+
     </div>
     <img class="below_button" src="assets/images/down.png" alt="down">
   </div>
 
-  <div class="divider"></div>
-
   <div id="controversies_container">
+      <div class="divider"></div>
+      <img src="assets/images/partiti.png" id="partitiImg">
+      <p id="partiti">Non conosci tutti i partiti e i leader?</p>
+      <p id="partitiSub">Fai un piccolo ripasso prima di iniziare, <a href="pages/parties.html" style="text-decoration: underline">cliccando qui</a></p>
+      <div class="divider"></div>
     <p id="topic_immigrazione" class="topic">
         Immigrazione
     </p>
@@ -112,10 +108,32 @@
         </div>
     </div>
     <div class="description">
-        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
-        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
-        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
+        In Italia si registrano all'incirca 5,750,000 immigrati, circa il 10% della popolazione. Di questi, 520,000 sono irregolari.
     </div>
+      <canvas id="i1chart" width="400" height="400"></canvas>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+          const ctx = document.getElementById('i1chart').getContext('2d');
+          new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+                  datasets: [{
+                      label: "Numero di sbarchi",
+                      data: [181436, 119369, 23370, 11471, 34154, 67040],
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.5)',
+                          'rgba(54, 162, 235, 0.5)',
+                          'rgba(255, 206, 86, 0.5)',
+                          'rgba(75, 192, 192, 0.5)',
+                          'rgba(153, 102, 255, 0.5)',
+                          'rgba(255, 159, 64, 0.5)'
+                      ]
+                  }]
+              }
+          });
+      </script>
+
     <div class="question_container">
         <p class="question_text">L'Italia dovrebbe chiudere i porti agli immigrati clandestini?</p>
         <button class="yes_button" id="i1y" onclick="show(true, 'i1')">Si</button>
@@ -123,30 +141,29 @@
         <button class="no_button" id="i1n" onclick="show(false, 'i1')">No</button>
         <div class="hide" id="i1">
             <div id="i1yes">
-                <p class="party">Fratelli d'Italia</p>
+                <p class="party">Fratelli d'Italia,   Lega,   Forza Italia</p>
                 <div class="divider_party_green"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-                <p class="party">Partito Democratico</p>
-                <div class="divider_party_green"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-                <p class="party">Lega</p>
-                <div class="divider_party_green"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+                <p class="statement">Sì. Controllare le frontiere bloccando gli sbarchi e gestendo ordinatamente flussi legali d'immigrazione. Istituire hot-spots in territori extra-europei per valutare le richieste d'asilo. Firmare accordi con gli Stati esteri per la detenzione in patria dei detenuti stranieri. Lega e FdI aggiungono anche di contrastare le Ong che favoriscono l'immigrazione clandestina.</p>
             </div>
             <div id="i1no">
+                <p class="party">Partito Democratico</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">
+                    No. Siamo stati, siamo e saremo sempre contro politiche di respingimenti: vale il sacrosanto principio per cui chi è in pericolo in mare va soccorso e salvato sempre. Abolire la
+                    <span class="hovertext" data-hover="Legge del 2002 che permette l'ingresso dei soli immigrati con un contratto di lavoro">"Bossi-Fini"</span>
+                    e approvare una nuova legge, che permetta l'ingresso legale per ragioni di lavoro. Superare il
+                    <span class="hovertext" data-hover="Regolamento europeo per cui ogni richiesta d'asilo deve essere esaminata dallo Stato in cui il richiedente ha fatto il proprio ingresso nell'Unione Europea"> Regolamento di Dublino</span>
+                    e favorire il dialogo con l'Unione Europea.
+                </p>
                 <p class="party">Movimento 5 Stelle</p>
                 <div class="divider_party_red"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-                <p class="party">Forza Italia</p>
+                <p class="statement">No. Dialogare con l'Unione Europea per definire la gestione dei flussi migratori e raffirzare delle politiche di inclusione e integrazione sociale e culturale.</p>
+                <p class="party">Azione-Italia Viva</p>
                 <div class="divider_party_red"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-                <p class="party">Azione+Europa</p>
+                <p class="statement">No. Favorire ingressi regolari e programmati, politiche di integrazione di migranti e rifugiati e l'istituzione di un Ministero per le migrazioni, anche per aumentare la manodopera.</p>
+                <p class="party">Alleanza Verdi-Sinistra</p>
                 <div class="divider_party_red"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-                <p class="party">Italia Viva</p>
-                <div class="divider_party_red"></div>
-                <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-
+                <p class="statement">No. Non esiste nessuna emergenza migrazione e non siamo di fronte a nessuna invasione; al contrario, i percorsi migratori rappresentano una risorsa demografica, economica e sociale fondamentale. Creare canali di migrazione legali e sicuri, abolendo quelle leggi come la Bossi-Fini che costringono all’irregolarità. </p>
             </div>
         </div>
     </div>
@@ -154,41 +171,712 @@
     <div>
         <img src="assets/images/info.png" class="info" alt="info">
         <div class="topic_title">
-            &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Immigrazione clandestina</span>
+            &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Ius soli e ius scholae</span>
         </div>
     </div>
     <div class="description">
-        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
-        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
-        L'immigrazione è il trasferimento permanente o temporaneo di singoli individui o di gruppi di persone in un paese o luogo diverso da quello di origine. Il fenomeno corrispondente opposto è l'emigrazione.
-    </div>
+        Lo ius soli prevede l'acquisizione della cittadinanza italiana per chiunque nasca sul nostro territorio. Lo ius scholae prevede l'acquisizione della cittadinanza italiana per chiunque sia immigrato in Italia prima dei 12 anni e abbia concluso almeno un ciclo di studi (cioè 5 anni scolastici).
+        <br><br> Queste due tematiche sono sorte in Italia in quanto il 15% delle nuove nascite proviene da genitori stranieri e più del 10% degli studenti italiani non possiede la cittadinanza, sebbene la maggior parte di loro siano nati e cresciuti in Italia.
+   </div>
     <div class="question_container">
-        <button class="show_more" id="i2b" onclick="showMore('i2')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+        <p class="question_text">Dovrebbe esser più facile ottenere la cittadinanza per i giovani che nascono o studiano in Italia?</p>
+        <button class="yes_button" id="i2y" onclick="show(true, 'i2')">Si</button>
+        <div style="width: min(10vw, 100px); display: inline-block"></div>
+        <button class="no_button" id="i2n" onclick="show(false, 'i2')">No</button>
+        <!--<button class="show_more" id="i2b" onclick="showMore('i2')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button> -->
         <div class="hide" id="i2">
-            <p class="party">Fratelli d'Italia</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-            <p class="party">Partito Democratico</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-            <p class="party">Lega</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-            <p class="party">Movimento 5 Stelle</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-            <p class="party">Forza Italia</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-            <p class="party">Azione+Europa</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
-            <p class="party">Italia Viva</p>
-            <div class="divider_party"></div>
-            <p class="statement">Chiudere tutti i porti e attuare subito il blocco navale davanti le coste della Libia. Il generale Vincenzo Santo - esponente di Fratelli d’Italia e uno dei massimi esperti in materia - spiega il nostro piano per fermare l’invasione</p>
+            <div id="i2yes">
+                <p class="party">Partito Democratico</p>
+                <div class="divider_party_green"></div>
+                <p class="statement" style="text-align: left">Sì. Per questo motivo lo ius scholae è in cima alle nostre priorità.</p>
+                <p class="party">Movimento 5 Stelle</p>
+                <div class="divider_party_green"></div>
+                <p class="statement" style="text-align: left">Sì. Per questo motivo lo ius scholae è in cima alle nostre priorità.</p>
+                <p class="party">Azione-Italia Viva</p>
+                <div class="divider_party_green"></div>
+                <p class="statement" style="text-align: left">Sì. Per questo motivo lo ius scholae è in cima alle nostre priorità.</p>
+                <p class="party">Alleanza Verdi-Sinistra</p>
+                <div class="divider_party_green"></div>
+                <p class="statement" style="text-align: left">Sì. Approvare una nuova legge sulla cittadinanza, che parta d Ius Soli e Ius Scholae, per restituire pari dignità ai tanti e alle tante cittadine che "da straniere/i" contribuiscono alla ricchezza del nostro Paese.</p>
+                <p class="party">Forza Italia</p>
+                <div class="divider_party_green"></div>
+                <p class="statement">Sebbene non rientri nel programma, il partito si è mostrato favorevole ad uno ius scholae temperato, a condizione che la cittadinanza venga concessa solo dopo 10 anni di scuola.</p>
+            </div>
+            <div id="i2no">
+                <p class="party">Fratelli d'Italia</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">Sebbene non rientri nel programma, il partito si è mostrato contrario allo ius soli e ius scholae, non ritenendoli una priorità per il momento.</p>
+                <p class="party">Lega</p>
+                <div class="divider_party_red"></div>
+                <p class="statement">L'Italia è il Paese europeo che concede più cittadinanze; inoltre, la cittadinanza non è uno strumento d'integrazione ma l'approdo di un processo integrativo. Per questi motivi, il partito si oppone allo ius soli e ad ogni declinazione simile, come ius scholae, ius culturae o ius temperato.</p>
+            </div>
         </div>
     </div>
+
+      <div class="divider"></div>
+
+      <p id="topic_diritti" class="topic">
+          Diritti
+      </p>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Matrimonio egualitario</span>
+          </div>
+      </div>
+      <div class="description">
+          Dal 2016, la Costituzione ammette l'unione civile tra persone dello stesso sesso.
+      </div>
+      <div class="question_container">
+          <p class="question_text">L'Italia dovrebbe legalizzare il matrimonio egualitario?</p>
+          <button class="yes_button" id="d1y" onclick="show(true, 'd1')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="d1n" onclick="show(false, 'd1')">No</button>
+          <div class="hide" id="d1">
+              <div id="d1yes">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì, è una priorità. Un paese civile non esclude, non emargina, non ghettizza. Le battaglie della
+                      comunità LGBTQI+ sono semplicemente richieste di uguaglianza: sono la voce di milioni di italiane e
+                      italiani che rivendicano libertà e autodeterminazione, che vogliono pari dignità.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì, è una priorità.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sebbene non rientri nel programma, i partiti si sono mostrati favorevoli alla proposta.</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Bisogna approvare una legge sul matrimonio egualitario, ma anche sull'accesso alle adozioni per pensione single e per coppie dello stesso sesso.</p>
+              </div>
+              <div id="d1no">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Sebbene Giorgia Meloni si sia detta favorevole alle unioni civili, il partito si è ripetutamente opposto al matrimonio egualitario in quanto aprirebbe la strada alle adozioni gay.</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Il partito sostiene che la famiglia naturale, con una mamma e un papà, costituisce la cellula fondamentale della società; per questo, vogliono contrastare tutti gli attacchi ideologici. Il partito difende i ruoli diversi ma complementari tra madre e padre, in contrapposizione alla cultura del "genitore 1 e 2".</p>
+                  <p class="party">Forza Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Sebbene sia favorevole alle unioni e ai diritti civili delle coppie gay, il partito si è opposto al matrimonio egualitario e alle adozioni gay.</p>
+              </div>
+          </div>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Eutanasia</span>
+          </div>
+      </div>
+      <div class="description">
+          L'eutanasia (o "suicidio assistito") è un procedimento tramite cui una persona (per motivi di salute) chiede di porre fine anticipatamente sua vita; il procedimento avviene con la somministrazione un farmaco da parte del medico.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Sei favorevole all'eutanasia?</p>
+          <button class="yes_button" id="d2y" onclick="show(true, 'd2')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="d2n" onclick="show(false, 'd2')">No</button>
+          <div class="hide" id="d2">
+              <div id="d2yes">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Approveremo una legge sul fine vita, per difendere fino all'ultimo libertà e autodeterminazione.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì, ma non è nel programma. Il partito è favorevole, ma con restrizioni quali l’obbligo di sottoporsi ad un percorso di cure palliative; inoltre, vuole che sia praticato da solo (cioè senza l'intervento di un medico che somministra il farmaco).</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Approvare una legge sul fine vita, che ascolti le disperate richieste di tante e tanti di poter mettere fine alla propria vita con dignità.</p>
+              </div>
+              <div id="d2no">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">Non è nel programma, ma il partito si è dichiarato contrario all'eutanasia: "Un quesito inaccettabile ed estremo che avrebbe scardinato il nostro ordinamento giuridico, da sempre orientato alla difesa della vita umana e alla tutela dei più fragili e deboli".</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Contrastare la visione per cui una vita à degna di essere vissuta solo se in forze ed in salute.</p>
+              </div>
+          </div>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">DDL Zan</span>
+          </div>
+      </div>
+      <div class="description">
+          Il DDL Zan è un disegno di legge (proposto circa un anno fa e poi bocciato al Senato) che prevede l’inasprimento delle pene contro i crimini e le discriminazioni contro omosessuali, transessuali, donne e disabili.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Sei favorevole al DDL Zan?</p>
+          <button class="yes_button" id="d3y" onclick="show(true, 'd3')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="d3n" onclick="show(false, 'd3')">No</button>
+          <div class="hide" id="d3">
+              <div id="d3yes">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Riconoscere i diritti civili delle persone LGBTQI+, approvando subito la legge contro l'omotransfobia (DDL Zan).</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Approvare una legge contro l'omotransfobia.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Approvare quanto prima una legge contro l’omotransfobia, e adottare iniziative di prevenzione e contrasto di ogni linguaggio d’odio.</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Approvare una legge contro l'omolesbobitransfobia, che tuteli le persone lgbtquia+. Inoltre, approvare una legge che impedisca tentativi di conversione per modificare l'orientamento sessuale o l'identità di genere di una persona.</p>
+              </div>
+              <div id="d3no">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">Sebbene non rientri nel programma, il partito si è opposto al Ddl Zan.</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No a iniziative come il Ddl Zan, in quanto mina la libertà di espressione, di opinione e di religione, e per contrastare l'ideologia gender.</p>
+                  <p class="party">Forza Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">Sebbene non rientri nel programma, il partito si è mostrato contrario al Ddl Zan.</p>
+              </div>
+          </div>
+      </div>
+      <div class="divider"></div>
+
+      <p id="topic_economia" class="topic">
+          Economia
+      </p>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Tassazione</span>
+          </div>
+      </div>
+      <div class="description">
+          La tassazione è basata sulle aliquote, cioè la percentuale di imposte (cioè tasse) che paghi rispetto al reddito. Il sistema di tassazione attuale (detto "ad aliquota progressiva") prevede che più il tuo reddito è alto, più imposte devi pagare in percentuale, fatta eccezione per le partite IVA [cioè i guadagni di aziende e lavoratori autonomi] inferiori ai €65.000, su cui è già presente una flat tax al 15%.
+          <br> La "flat tax" (o "tassa piatta") è un altro sistema di tassazione, che prevede una aliquota fissa unica (invece di aliquote progressive). Chi lo propone sostiene che serve per alleggerire l'oppressione fiscale, combattere l'evasione ed aumentare le entrate dello Stato. La flat tax incrementale prevede una tassa piatta non sul reddito, ma sul suo incremento rispetto all'anno precedente (in parole povere, quanto guadagni in più rispetto a un anno prima).
+      </div>
+      <div class="question_container">
+          <p class="question_text">Saresti favorevole all'introduzione della flat tax?</p>
+          <button class="yes_button" id="e1y" onclick="show(true, 'e1')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="e1n" onclick="show(false, 'e1')">No</button>
+          <div class="hide" id="e1">
+              <div id="e1yes">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Estendere la flat tax alle partite IVA fino a €100.000 e sugli incrementi di reddito.</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Il partito promuove una flat tax al 15% per tutti. Vogliono iniziare estendendo la flat tax alle partite IVA fino a €100.000 e sugli incrementi di reddito, per poi raggiungere una flat tax vera e propria al 15%.</p>
+                  <p class="party">Forza Italia</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Il partito promuove una flat tax in tre fasi: inizialmente estenderla alle partite IVA fino a €100.000 e su incrementi di reddito; poi ridurre le prime tre aliquote (cioè quelle fino a €50.000); infine raggiungere una flat tax al 23% per tutti.</p>
+              </div>
+              <div id="e1no">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. La flat tax non è presente nel programma, ma Letta l'ha definita "ingiusta" (in quanto avvantaggia i ricchi sfavorendo i più poveri) ed "incostituzionale", in quanto nella Costituzione (art. 53) c'è scritto "[...] in un sistema tributario informato a criteri di progressività"; Letta ha anche affermato che aprirebbe una voragine nelle casse dello Stato.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. La flat tax non è presente nel programma, ma Conte ha affermato di essere contrario in quanto è una proposta non concreta e solo a favore dei ricchi.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. La flat tax non è presente nel programma, ma Calenda ha affermato che questa danneggerebbe molto il bilancio dello Stato e porterebbe l'Italia vicina al fallimento.</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Bisogna rispettare il criterio di progressività.</p>
+                  <p class="party">Italexit</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Bisogna ricostruire la progressività dell'imposizione fiscale. Bisogna anche lasciarsi alle spalle una fiscalità opprimente e invasiva, e combattere le forme peggiori di evasione fiscale. </p>
+              </div>
+          </div>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Reddito di cittadinanza</span>
+          </div>
+      </div>
+      <div class="description">
+          La povertà in Italia, attualmente, colpisce 1,9 milioni di famiglie (7,5%) e 5,6 milioni di persone (9,4%). <br> Il Reddito di Cittadinanza (RdC) è uno strumento economico adottato nel 2019 per contrastare la disoccupazione e la povertà. Consiste in una somma di denaro che alcuni singoli o famiglie ricevono mensilmente, finché sono disoccupati. L'importo varia secondo molti parametri; per esempio, una persona che vive da sola riceve fino a €780 mensili, mentre un nucleo familiare più grande riceve fino a €1330 al mese.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Saresti favorevole al potenziamento del RdC?</p>
+          <button class="yes_button" id="e2y" onclick="show(true, 'e2')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="e2n" onclick="show(false, 'e2')">No</button>
+          <div class="hide" id="e2">
+              <div id="e2yes">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Ricalibrare secondo le indicazioni della Commissione Saraceno, a partire dall'ingiustificata penalizzazione delle famiglie numerose e/o con minori; ridurre il periodo minimo di residenza in Italia per accedere al RdC (oggi di 10 anni). Come ulteriore aiuto alla povertà, realizzare 500.000 alloggi popolari nei prossimi 10 anni.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Misure per renderlo più efficiente; monitoraggio delle misure antifrode.</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Rafforzare il RdC, secondo le indicazioni della Commissione Saraceno, per arrivare ad un vero e proprio Reddito Universale di Base. Come ulteriore aiuto alla povertà, garantire a tutti il diritto alla casa.</p>
+              </div>
+              <div id="e2no">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Abolire il RdC per introdurre un nuovo strumento che tuteli i soggetti privi di reddito impossibilitati a lavorare (o difficilmente occupabili): disabili, over 60, nuclei familiari con minori a carico).</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Mantenerlo per i percettori inidonei al lavoro, ma revisionare i criteri di accesso e gli importi. Per i percettori che possono lavorare, renderlo un sostegno economico finalizzato all'occupazione.Inoltre, Istituire il Reddito di reciprocità, secondo cui chi riceve sussidi dal Comune deve mettersi a disposizione della collettività con lavori utili.</p>
+                  <p class="party">Forza Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Revisionarlo come misura di sostegno all'occupazione. Questa rimodulazione porterebbe al recupero di 4 miliardi di euro l'anno.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Eliminare il RdC dopo il primo rifiuto di un'offerta di lavoro congrua; ridurlo dopo 2 anni; far fare al beneficiario servizi sociali (come era pensato inizialmente).</p>
+
+              </div>
+          </div>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Pensioni</span>
+          </div>
+      </div>
+      <div class="description">
+          Ci sono due tipologie di pensione: quella di vecchiaia e quella anticipata. La pensione di vecchiaia si ottiene al raggiungumento di una determinata età e dopo aver versato un certo numero di contributi (cioè aver lavorato regolarmente un certo numero di anni). Invece, la pensione anticipata si può ottenere grazie a varie condizioni. <br> La Legge Fornero, che regola il sistema pensionistico attuale, prevede una pensione di vecchiaia a partire dai 67 anni e con minimo 20 anni di contributi, e una pensione anticipata dopo circa 42/43 anni di contributi.
+          Questa Legge è valida fino al 31 dicembre 2022, perciò i partiti possono decidere di  prolungarla o sostituirla.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Bisognerebbe sostituire la legge Fornero? </p>
+          <button class="yes_button" id="e3y" onclick="show(true, 'e3')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="e3n" onclick="show(false, 'e3')">No</button>
+          <div class="hide" id="e3">
+              <div id="e3yes">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Innalzamento delle pensioni minime. Stop all'adeguamento dell'età pensionabile all'aspettativa di vita.</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Introduzione di un nuovo sistema pensionistico, che prevede quanto segue. Pensione di vecchiaia a 63 anni (invece che 67) per le donne. Pensione anticipata tramite la 
+				  <span class="hovertext" data-hover="Pensione anticipata dopo 41 anni di contributi; per le donne si aggiunge un anno per ogni figlio Europea"> Quota 41</span>
+				  (invece che 43 anni per uomini e 42 anni per donne). </p>
+                  <p class="party">Forza Italia</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Alzare la pensione minima a €1000 al mese per 13 mensilità.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. In più, bisogna aumentare i lavori classificati come gravosi/usuranti, e appoggiare un'uscita più flessibile del lavoro.</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Concedere la possibilità di uscire dal lavoro a 62 anni o con 41 anni di contributi. Inoltre, alzare la pensione minima a €1.000 al mese</p>
+              </div>
+              <div id="e3no">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No, ma bisogna facilitare l'accesso alle pensioni e aumentarne l'ammontare per i lavori gravosi o usuranti.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. La lista di Calenda e Renzi non ne parla nel suo programma, ma i due capi politici si sono dichiarati favorevoli al mantenimento della Legge Fornero.</p>
+              </div>
+          </div>
+    </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Pace fiscale
+          </span>
+          </div>
+      </div>
+      <div class="description">
+          Attualmente, l'Agenzia delle entrate conta mille miliardi di euro di tasse non ancora riscosse. La "pace fiscale" proposta da Salvini (della Lega) punta ad esentare (o comunque a scontare) le tasse arretrate che molti cittadini o aziende hanno.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Saresti favorevole alla pace fiscale?</p>
+          <button class="show_more" id="e4b" onclick="showMore('e4')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+          <div class="hide" id="e4">
+              <p class="party">Fratelli d'Italia,  Lega,  Forza Italia</p>
+              <div class="divider_party_green"></div>
+              <p class="statement">Sì. Pace fiscale e 
+			  <span class="hovertext" data-hover="Riduzione delle somme dovute dai piccoli contribuenti in difficoltà economica"> "saldo e stralcio" </span>
+			  per le persone e aziende in difficoltà, tramite un accordo tra cittadini ed 
+			  <span class="hovertext" data-hover="Il Tesoro dello Stato"> Erario. </span> </p>
+              <p class="party">Altri</p>
+              <div class="divider_party"></div>
+              <p class="statement">Gli altri partiti non si sono esposti né favorevoli né contrari alla proposta.</p>
+          </div>
+          <button class="show_more" id="e4bl" style="display: none; text-align: center" onclick="showMore('e4')">Nascondi</button>
+      </div>
+
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Tassa patrimoniale</span>
+          </div>
+      </div>
+      <div class="description">
+          L'imposta patrimoniale, talvolta anche indicata in ambito giornalistico come "imposta o tassa sui ricchi", è un'imposta sul patrimonio personale e generale delle persone fisiche.
+      </div>
+      <div class="question_container">
+          <p class="question_text">L'italia dovrebbe aumentare le imposte ai redditi più alti?</p>
+          <button class="yes_button" id="e5y" onclick="show(true, 'e5')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="e5n" onclick="show(false, 'e5')">No</button>
+          <div class="hide" id="e5">
+              <div id="e5yes">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Aumentare le imposte sulle successioni e donazioni superiori ai 5 milioni di euro (pari allo 0,2% del totale delle eredità e donazioni in Italia).</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Aumentare la tassazione sui patrimoni superiori a 5 milioni di euro, con un'imposta progressiva che cresca fino al 2% oltre i 50 milioni.</p>
+              </div>
+              <div id="e5no">
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Sulla patrimoniale, Giuseppe Conte osserva: "I giovani non vogliono una dote, vogliono la speranza per il proprio futuro, vogliono un’opportunità concreta di lavoro, non il lavoro precario di un giorno o una settimana". </p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. L'Italia è uno dei Paesi a più bassa mobilità sociale, ma la tassa patrimoniale non aiuterebbe: servono meritocrazia e pari opportunità.</p>
+                  <p class="party">Fratelli d'Italia,  Lega,  Forza Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. La coalizione di centrodestra dice no alle patrimoniali di ogni genere. In più, Forza Italia propone anche l'eliminazione delle tasse di successione e donazione.
+                  </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p id="topic_ambiente" class="topic">
+          Ambiente
+      </p>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Energia nucleare</span>
+          </div>
+      </div>
+      <div class="description">
+          Dopo il referendum del 1987 l'Italia ha chiuso tutte le sue centrali di energia nucleare. <br><br> Chi è a favore del ritorno al nucleare, si appella: al fatto che importiamo il 10% dell'elettricità dal nucleare francese; all'UE, che lo ha inserito nella tassonomia delle fonti sostenibili; all'elevata quantità di energia prodotta, a cui si aggiunge il basso costo di produzione (a centrale ultimata). Chi invece è contrario fa riferimento a costi e tempi di realizzazione elevati, difficoltà nella gestione delle scorie e conseguenze in caso di incidenti. Per maggiori dettagli, puoi consultare https://luce-gas.it/attualita/energia-nucleare-pro-contro.
+      </div>
+      <div class="question_container">
+          <p class="question_text">L'Italia dovrebbe tornare alle centrali nucleari?</p>
+          <button class="yes_button" id="a1y" onclick="show(true, 'a1')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="a1n" onclick="show(false, 'a1')">No</button>
+          <div class="hide" id="a1">
+              <div id="a1yes">
+                  <p class="party">Fratelli d'Italia,   Lega,  Forza Italia</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Ricorrere alla produzione energetica attraverso la creazione di impianti di ultima generazione senza veti e preconcetti, valutando anche il ricorso al nucleare pulito e sicuro.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Per raggiungere le emissioni zero nel 2050, è necessario utilizzare sia il rinnovabile sia il nucleare.</p>
+              </div>
+              <div id="a1no">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. I tempi di realizzazione e le tecnologie esistenti non aiutano a ridurre significativamente le emissioni entro il 2030 e non risolvono problemi ambientali.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Il partito punta a favorire la creazione di impianti di energia rinnovabile, facendo intendere una posizione negativa nei confronti del nucleare. A confermarlo è il Presidente della Camera, Roberto Fico, dicendo un secco no all'energia nucleare. </p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. La transizione energetica è possibile senza far ricorso all'energia nucleare, tra l'altro già rifiutata dagli italiani in due referendum nazionali. Inoltre, le sicurezze sul nucleare di quarta generazione sono false e la sua realizzazione lontana nel tempo.</p>
+              </div>
+          </div>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Transizione ecologica</span>
+          </div>
+      </div>
+      <div class="description">
+          Tutti i principali partiti italiani sono favorevoli alla transizione ecologica del nostro Paese (e quindi all'aumento della produzione di energie rinnovabili), sia per contrastare i cambiamenti climatici, sia per raggiungere l'indipendenza energetica. <br> Tra gli argomenti più discussi, ci sono i rigassificatori e il 
+		  <span class="hovertext" data-hover="Piano dell'UE che punta a ridurre le emissioni nette di gas serra di almeno il 55% entro il 2030 e di raggiungere la neutralità climatica entro il 2050"> FitFor55. </span> </p>
+      </div>
+      <div class="question_container">
+          <p class="question_text">Come dovremmo condurre al meglio la transizione ecologica nel nostro Paese?</p>
+          <button class="show_more" id="a2b" onclick="showMore('a2')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+          <div class="hide" id="a2">
+              <p class="party">Partito Democratico</p>
+              <div class="divider_party"></div>
+              <p class="statement">Attuare il FitFor55; costruire nuovi parchi rinnovabili per creare 470mila lavori verdi 
+			  <span class="hovertext" data-hover="Lavori che aiutano a ripristinare un ambiente sostenibile"> lavori verdi </span>
+			  in 10 anni. Inoltre, il PD si è detto favorevole ai rigassificatori, ma solo per pochi anni.</p>
+              <p class="party">Movimento 5 Stelle</p>
+              <div class="divider_party"></div>
+              <p class="statement">Raggiungere la Società a 2000 watt (per maggiori informazioni, consulta https://www.local-energy.swiss/it/programme/2000-watt-gesellschaft/was-ist-die-2000-watt-gesellschaft.html#/). Mantenere i superbonus attuali e aggiungere un superbonus che favorisca l'energia rinnovabile nelle imprese. Il partito si è anche opposto a nuove trivellazioni e a nuovi inceneritori.</p>
+              <p class="party">Azione-Italia Viva</p>
+              <div class="divider_party"></div>
+              <p class="statement">Nel breve periodo: costruire due rigassificatori e aumentare la produzione di gas nazionale (invece di importarlo); rafforzare la strategia sulle energie rinnovabili, anche individuando aree idonee per la loro produzione e favorendo lo sviluppo dell'idrogeno. Nel medio periodo, ridurre il 55% delle emissioni di CO2 entro il 2030, investendo sul rinnovabile. Nel lungo periodo, raggiungere le emissioni zero nel 2050. In generale, intervenire soprattutto su trasporti ed edilizia, che influiscono più di tutti sulle emissioni; puntare anche sulle foreste.</p>
+              <p class="party">Alleanza Verdi-Sinistra</p>
+              <div class="divider_party"></div>
+              <p class="statement">La lista fa del clima il punto cardine del suo programma. La transizione energetica, se diminuiamo i consumi, è possibile con il solo utilizzo di energie rinnovabili e anche riducendo l'uso del metano. Riorganizzare il mercato della rete elettrica, per garantire il 100% di energia elettrica rinnovabile; attuare il modello delle comunità energetiche. A livello globale bisogna dimezzare le emissioni di gas serra nei prossimi 8 anni; l'Italia entro il 2030 deve ridurre le emissioni del 70% (rispetto al 1990) e raggiungere la neutralità climatica entro il 2045.</p>
+              <p class="party">Fratelli d'Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Realizzare gli obiettivi del Pnrr, ma salvaguardando il sistema produttivo colpito da anni di crisi. Durante i negoziati del pacchetto Fit for 55, difendere e tutelare gli interessi del sistema industriale e produttivo nazionale. Introduzione del principio per cui “più differenzi meno paghi”. Sì ai rigassificatori; riattivare (e ammodernare) gli impianti di gas già esistenti e realizzarne di nuovi. </p>
+              <p class="party">Lega</p>
+              <div class="divider_party"></div>
+              <p class="statement">Realizzare le Comunità Energetiche. Riprendere la produzione di gas naturale. Diversificare gli approvvigionamenti, anche grazie ai rigassificatori e in generale al gas naturale. Poiché le rinnovabili da sole non bastano (nel 2021 hanno coperto il 37% della richiesta di energia elettrica), sviluppare parallelamente anche altre tecnologie come quella idroelettrica o geotermica.</p>
+              <p class="party">Forza Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Piantare 1 milione di alberi nuovi. Si ai termovalorizzatori e agli impianti di biomassa. Raddoppio della produzione di gas nazionale.</p>
+
+          </div>
+          <button class="show_more" id="a2bl" style="display: none; text-align: center" onclick="showMore('a2')">Nascondi</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <p id="topic_interna" class="topic">
+          Politica interna
+      </p>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Cannabis</span>
+          </div>
+      </div>
+      <div class="description">
+          Il numero di Paesi in cui la cannabis viene legalizzata (per uso medico o ricreativo) è in crescita; perciò, anche in Italia si sta discutendo di questo tema. Lo Stato avrebbe il monopolio delle vendite, quindi sia lo sottrarrebbe alle mafie (indebolendole e non spendendo più soldi per le catture e le procedure legali), sia rappresenterebbe un'entrata in più per lo Stato. Dall'altra parte però, sono noti i rischi per la salute mentale dei giovani che la consumano regolarmente.
+      </div>
+      <div class="question_container">
+          <p class="question_text">L'Italia dovrebbe legalizzare il consumo della cannabis?</p>
+          <button class="yes_button" id="n1y" onclick="show(true, 'n1')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="n1n" onclick="show(false, 'n1')">No</button>
+          <div class="hide" id="n1">
+              <div id="n1yes">
+                  <p class="party">Partito Democratico</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Legalizzare l'autoproduzione di cannabis per uso personale e fare in modo che la cannabis terapeutica sia effettivamente garantita ai pazienti che ne hanno bisogno.</p>
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Regolamentare della coltivazione della cannabis per uso personale.</p>
+                  <p class="party">Azione-Italia Viva</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sebbene non rientri nel programma, il partito si è mostrato favorevole alla legalizzazione delle droghe leggere: "Legalizzazione delle droghe leggere? Io sono decisamente favorevole. Non penso che uno spinello sia più dannoso di una bottiglia di vino“.</p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì. Approvare una legge che regolamenti legalmente produzione, distribuzione e vendita di cannabis per gli adulti; inoltre, che permetta la coltivazione per uso personale e favorisca la nascita Cannabis Social Club, cioè di ambiti non profit di condivisione collettiva.</p>
+              </div>
+              <div id="n1no">
+                  <p class="party">Fratelli d'Italia</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Promozione di stili di vita sani per contrastare il disagio e le devianze giovanili come la droga.</p>
+                  <p class="party">Lega</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Stop a qualsiasi proposta di liberalizzazione o di legalizzazione della droga, indipendentemente dalla falsa distinzione tra leggera e pesante. </p>
+              </div>
+          </div>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Riforma scuola</span>
+          </div>
+      </div>
+      <div class="description">
+          I partiti hanno messo sul piatto diverse idee per riformare la scuola.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Come andrebbe riformata la scuola?</p>
+          <button class="show_more" id="n2b" onclick="showMore('n2')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+          <div class="hide" id="n2">
+              <p class="party">Partito Democratico</p>
+              <div class="divider_party"></div>
+              <p class="statement">Allineamento degli stipendi dei professori alla media europea; taglio dei costi per le famiglie a basso ISEE; investimenti sulle università.</p>
+              <p class="party">Movimento 5 Stelle</p>
+              <div class="divider_party"></div>
+              <p class="statement">Adeguamento salari degli insegnanti ai livelli europei; psicologi e pedagogisti a scuola; aumento dei fondi per università e ricerca; riduzione del numero chiuso per l'accesso alle università.</p>
+              <p class="party">Azione-Italia Viva</p>
+              <div class="divider_party"></div>
+              <p class="statement">Scuola dell'obbligo fino a 18 anni (invece che 16); riduzione dei cicli scolastici da 13 a 12 anni, per terminare le superiori a 18 anni. Superare disparità e svantaggio territoriale, e potenziare l'educazione civica. Sviluppare le scuole professionali.</p>
+              <p class="party">Alleanza Verdi-Sinistra</p>
+              <div class="divider_party"></div>
+              <p class="statement">Massimo di 20 alunni per classe (15 se presente qualcuno con disabilità). Estendere sia il tempo scuola (per lasciare meno giovani da soli) sia l'obbligo scolastico a 18 anni. Istruzione gratuita per tutti. Assunzione maggiore di docenti a tempo indeterminato. Aumentare i finanziamenti fino al 6% del PIL (che è la media europea).</p>
+              <p class="party">Fratelli d'Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Aggiornare i programmi scolastici, tutelando le materie classiche, potenziando quelle scientifiche e l'inglese (anche incentivando l'anno all’estero). Valorizzazione degli Istituti tecnici; riforma del Pcto. Ridurre di un anno il percorso di studio scolastico, a parità di monte ore totale, per potersi diplomare a 17-18 anni.</p>
+              <p class="party">Lega</p>
+              <div class="divider_party"></div>
+              <p class="statement">Sviluppare gli istituti professionali. Mai più didattica a distanza. Superare il precariato, coprire la carenza personale docente e Ata, adeguare gli stipendi. Stop alla propaganda a scuola.</p>
+              <p class="party">Forza Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Tempo pieno nelle scuole di ogni ordine e grado. Istituire la figura dello psicologo scolastico.</p>
+          </div>
+      <button class="show_more" id="n2bl" style="display: none; text-align: center" onclick="showMore('n2')">Nascondi</button>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Giovani</span>
+          </div>
+      </div>
+      <div class="description">
+          I giovani sono il futuro del nostro Paese. Tutto ciò che verrà deciso oggi plasmerà i futuri cittadini italiani e, pertanto, rappresenta un punto chiave del programma di ogni partito.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Come bisognerebbe aiutare i giovani italiani?</p>
+          <button class="show_more" id="n3b" onclick="showMore('n3')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+          <div class="hide" id="n3">
+              <p class="party">Partito Democratico</p>
+              <div class="divider_party"></div>
+              <p class="statement">Dotazione di 10 mila euro per i 18enni con redditi medio bassi,. Diritto di voto a fuorisede e 16enni. Contributo da 2000 euro all'anno per studenti e lavoratori con meno di 35 anni e un regolare contratto d'affitto (i giovani devono avere un ISEE inferiore a 20.000 euro, cioè l'80% dei giovani in affitto).Niente più stage extracurricolari, ma solo apprendistato retribuito.Combattere la disoccupazione giovanile. Bonus per coprire parzialmente le spese sulla prima casa.</p>
+              <p class="party">Movimento 5 Stelle</p>
+              <div class="divider_party"></div>
+              <p class="statement">Incentivi ad imprenditoria giovanile e sburocratizzazione delle startup. Riscatto gratuito della laurea. Pensione garanzia giovani per aiutare chi con carriere intermittenti fatica ad avere una pensione. Proroga dello sgravio per l'assunzione di giovani under 36 e stabilizzazione degli sgravi per l'acquisto della prima casa da parte di under 36. Compenso minimo per tirocinanti e riconoscimento del tirocinio a fini pensionistici. </p>
+              <p class="party">Azione-Italia Viva</p>
+              <div class="divider_party"></div>
+              <p class="statement">Incentivare l'imprenditorialità giovanile. Tassazione zero per giovani fino ai 25 anni e tagliarla del 50% dai 26 ai 30. Incentivi per la prima casa per gli under 35, contrastare l'abbandono scolastico estendendo obbligo d'istruzione fino ai 18 anni. Riformare il sistema dei tirocini curricolari assicurare che siano esperienze realmente formative e non soltanto atti dovuti all’interno del percorso di istruzione.</p>
+              <p class="party">Alleanza Verdi-Sinistra</p>
+              <div class="divider_party"></div>
+              <p class="statement">Incentivare la formazione di nuove imprese e start-up per promuovere l'imprenditoria giovanile. Restituire dignità e senso alla carriera universitaria, riducendo la nota “fuga dei cervelli”.</p>
+              <p class="party">Fratelli d'Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Zero tasse per i primi tre anni per i giovani under 30 e incentivi per aziende che assumono ragazzi. Potenziamento fondi per l'autoimprenditorialità giovanile e snellimento delle procedure d'accesso. Rafforzamento del Fondo di garanzia statale per il mutuo sulla prima casa delle giovani coppie e riduzione delle imposte sull’acquisto della prima casa. Ripensamento del sistema pensionistico che al fine di garantire anche le giovani generazioni e chi percepirà l’assegno solo in base al regime contributivo.</p>
+              <p class="party">Lega</p>
+              <div class="divider_party"></div>
+              <p class="statement">Pensione di garanzia per i giovani (pensione minima di €1000). Semplificazione e adeguamento della normativa fiscale per il settore startup. Sgravi fiscali nell'assunzione di personale per le giovani imprese. Deduzione per privati ed imprese che investono e/o acquisiscono startup. </p>
+              <p class="party">Forza Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Valutare l’impatto generazionale delle leggi e dei provvedimenti. Potenziare gli strumenti di finanziamento per esperienze formative e lavorative all’estero per giovani diplomati e laureati; rafforzare il sistema del 
+			  <span class="hovertext" data-hover="Prestito agevolato per chi vuole avviare un'attività"> prestito d'onore </span>  
+			  per studenti universitari; supportare l’imprenditoria giovanile, con incentivi alla creazione di start up tecnologiche e a valenza sociale. Agevolare l’accesso al mutuo per l’acquisto della prima casa per le giovani coppie.</p>
+          </div>
+          <button class="show_more" id="n3bl" style="display: none; text-align: center" onclick="showMore('n3')">Nascondi</button>
+      </div>
+
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Riforma costituzionale</span>
+          </div>
+      </div>
+      <div class="description">
+          I partiti hanno messo sul piatto diverse idee per migliorare la democrazia. In particolare, se la coalizione di centro-destra dovesse ottenere due terzi dei parlamentare, avrebbe la possibilità di modificare la costituzione.
+      </div>
+      <div class="question_container">
+          <p class="question_text">Che modifiche andrebbero apportate alle istituzioni italiane?</p>
+          <button class="show_more" id="n4b" onclick="showMore('n4')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+          <div class="hide" id="n4">
+              <p class="party">Partito Democratico</p>
+              <div class="divider_party"></div>
+              <p class="statement">Combattere il 
+			  <span class="hovertext" data-hover="Azioni politiche spregiudicate con il solo scopo di rafforzarsi"> trasformismo parlamentare </span>
+			  . Introduzione della 
+			  <span class="hovertext" data-hover="Meccanismo grazie al quale un governo non può essere sfiduciato se contemporaneamente non si vota la fiducia ad un altro esecutivo"> sfiducia costruttiva </span>
+			  . Dare nuovi spazi e nuove modalità di partecipazione alla democrazia, come le 
+			  <span class="hovertext" data-hover="Un esperimento di democrazia partecipativa proposto dal PD, per far emergere proposte e discutere di esse"> Agorà democratiche. </span> </p>
+              <p class="party">Movimento 5 Stelle</p>
+              <div class="divider_party"></div>
+              <p class="statement">Introdurre la sfiducia costruttiva. Dare il potere al Presidente del Consiglio di revocare i ministri. Abbassare l'età minima di voto ai 16enni. Istituire un limite di due mandati per tutti i parlamentari. Impedire i
+              <span class="hovertext" data-hover="Avvengono quando un parlamentare cambia partito nel corso di una legislatura"> cambi di casacca </span>
+			  in Parlamento</p>
+              <p class="party">Azione-Italia Viva</p>
+              <div class="divider_party"></div>
+              <p class="statement">Superare il 
+			  <span class="hovertext" data-hover="Forma di bicameralismo in cui le due camere hanno lo stesso potere legislativo"> bicameralismo paritario. </span> Conferire maggiore autonomia a Comuni, Province e Regioni, per un vero federalismo. Riformare il sistema elettorale e velocizzare l'iter di approvazione delle leggi. Eleggere direttamente il Presidente del Consiglio, come un "Sindaco d'Italia".</p>
+              <p class="party">Fratelli d'Italia,  Lega,  Forza Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Eleggere direttamente il Presidente della Repubblica. Riconoscere maggiore autonomia alle regioni (come prevede l'art. 116 della Costituzione).</p>
+          </div>
+          <button class="show_more" id="n4bl" style="display: none; text-align: center" onclick="showMore('n4')">Nascondi</button>
+      </div>
+
+      <div class="divider"></div>
+      <p id="topic_estera" class="topic">
+          Politica estera
+      </p>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Unione Europea</span>
+          </div>
+      </div>
+      <div class="description">
+          Anche se tutti i partiti maggiori appoggiano la NATO e l'UE, i rapporti tra Italia e Unione Europea sono molto discussi, soprattutto in vista di una crisi economica post Covid-19 della quale vediamo solo i vaghi contorni. La popolazione, come la politica, si divide: c’è chi sostiene che l’Europa non abbia riservato all’Italia un trattamento di favore degno della situazione e chi, invece, è convinto che l’UE sia l’unica scialuppa di salvataggio che ci permetterà di rimanere a galla. 
+      </div>
+      <div class="question_container">
+          <p class="question_text">In che modo l'Italia dovrebbe interagire con l'Unione Europea?</p>
+          <button class="show_more" id="s1b" onclick="showMore('s1')">Clicca qui per vedere cosa <br>ne pensa ciascun partito</button>
+          <div class="hide" id="s1">
+              <p class="party">Partito Democratico</p>
+              <div class="divider_party"></div>
+              <p class="statement">Appoggio ad una strategia inclusiva verso i Paesi vicini. Obiettivo ultimo: dar vita ad una confederazione europea.</p>
+              <p class="party">Movimento 5 Stelle</p>
+              <div class="divider_party"></div>
+              <p class="statement">Sostenere un atteggiamento proattivo dell'Italia in Europa e nel mondo. Dialogare con l'UE per definire la gestione dei flussi migratori. Superare politiche di austerità e rigore legate alla moneta unica; pensare ad una revisione radicale dei trattati; appoggiare un'alleanza con i Paesi dell'Europa del sud. </p>
+              <p class="party">Azione-Italia Viva</p>
+              <div class="divider_party"></div>
+              <p class="statement">Abolire l'unanimità nel processo decisionale del Consiglio Europeo. Sviluppare una politica estera comune dell'UE.</p>
+              <p class="party">Fratelli d'Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Tutelare l’interesse nazionale all'estero. Rilanciare il sistema di integrazione europea, per un’Europa delle Patrie, fondata sull’interesse dei popoli e capace di affrontare le sfide del nostro tempo. Difendere le radici classiche e giudaico-cristiane dell’Europa e dei suoi valori fondamentali di libertà, democrazia, solidarietà, sussidiarietà e giustizia.</p>
+              <p class="party">Lega</p>
+              <div class="divider_party"></div>
+              <p class="statement">Difendere gli interessi italiani a Bruxelles. Sostenere il voto all'unanimità nel Consuglio UE. Revisionare i trattati europei. Prima di tutto, cambiare il "Green deal" e il "Fit for 55", che chiedono obiettivi impossibili da raggiungere; negoziare quindi una attenuazione o procrastinazione. Far diventare l’Italia il ponte verso i Paesi terzi a nome della NATO e dell’Europa.</p>
+              <p class="party">Forza Italia</p>
+              <div class="divider_party"></div>
+              <p class="statement">Promuovere una politica estera europea comune. Nel Consiglio Europepo, passare dal sistema di voto ad unanimità a quello di maggioranza. Revisionare il
+              <p class="party">Alleanza Verdi-Sinistra</p>
+              <div class="divider_party"></div>
+              <p class="statement">Rendere più ambizioso il Green Deal, aumentando gli obiettivi del pacchetto FItFor55. Adottare una politica estera comune; puntare ad un'Europa sia all'avanguarda nella lotta al cambiamento climatico, sia come un forte e autonomo attore di pace.</p>
+              <p class="party">Italexit</p>
+              <div class="divider_party"></div>
+              <p class="statement">La lista fa dell'uscita dall'Unione Europea (detta, appunto, "Italexit") il cardine centrale del suo programma. Liberare l'Italia dalla gabbia dell'Unione Europea e della moneta unica, per un'Italia indipendente e sovrana. Uscire dall'Unione Europea e rinunciare all'Euro, per non mettere il futuro dell'Italia nelle mani dei mercati. Abbandonare la moneta unica non impedirebbe di collaborare comunque tra Paesi europei, per quanto riguarda geopolitica, migrazioni e clima. Infine, raggiungere una sovranità alimentare </p>
+                  <span class="hovertext" data-hover="Accordo dell'UE che richiede il rispetto di alcuni parametri di bilancio"> Patto di Stabilità. </span> </p>
+          </div>
+          <button class="show_more" id="s1bl" style="display: none; text-align: center" onclick="showMore('s1')">Nascondi</button>
+      </div>
+      <div>
+          <img src="assets/images/info.png" class="info" alt="info">
+          <div class="topic_title">
+              &nbsp;<span style="background-color:rgb(102, 200, 255, 0.1)">Spese militari</span>
+          </div>
+      </div>
+      <div class="description">
+          In vista dei recenti avvenimenti in Ucraina, anche il tema della difesa è presente in campagna elettorale. Tutti i partiti maggiori sono favorevoli a un progetto di difesa comune europea; in più, Azione/Italia Viva e Forza Italia sostengono la possibilità di un esercito europeo comune.
+          Inoltre, in Parlamento si è discusso l'aumento delle spese militari per la difesa. Attualmente fisse allo 1,6%, c'è stata la proposta di aumentarle fino al 2%, come secondo gli accordi NATO.
+      </div>
+      <div class="question_container">
+          <p class="question_text">L'Italia dovrebbe aumentare le spese militari fino al 2%?</p>
+          <button class="yes_button" id="s2y" onclick="show(true, 's2')">Si</button>
+          <div style="width: min(10vw, 100px); display: inline-block"></div>
+          <button class="no_button" id="s2n" onclick="show(false, 's2')">No</button>
+          <div class="hide" id="s2">
+              <div id="s2yes">
+                  <p class="party">Fratelli d'Italia,   Lega,  Forza Italia,  Azione-Italia Viva</p>
+                  <div class="divider_party_green"></div>
+                  <p class="statement">Sì.</p>
+              </div>
+              <div id="s2no">
+                  <p class="party">Movimento 5 Stelle</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. L'argomento non è presente nel programma, ma Conte ha detto no a nuove spese militari.
+                      </p>
+                  <p class="party">Alleanza Verdi-Sinistra</p>
+                  <div class="divider_party_red"></div>
+                  <p class="statement">No. Sì al progetto di difesa comune europea, ma no all'aumento della spesa militare, a fronte di una riduzione del bilancio dello Stato sull'istruzione.
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="divider"></div>
+  </div>
 </div>
+  <script>
+      $(window).scroll(function(){
+          let myButton = document.getElementById("backToTop");
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+              myButton.style.opacity = "1.0";
+          } else {
+              myButton.style.opacity = "0";
+          }
+      });
+  </script>
+<button id="backToTop" onclick="topFunction()">↑</button>
 <div id="menu_obscurer"></div>
 
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>

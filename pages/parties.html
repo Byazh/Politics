@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/script.js"></script>
+    <meta name="theme-color" content="#52a9cf" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Elezioni</title>
+</head>
+
+<body class="body">
+<img class="menu" alt="menu" style="margin-left: 25px; margin-top: 25px" src="../assets/images/menu.png" onclick="openNav()">
+<div id="menu">
+    <a href="javascript:void(0)" id="menu_close" onclick="closeNav()">&times;</a>
+    <a class="menu_title" href="../index.html">🏠 Home</a>
+    <a class="menu_title" href="parties.html">🗳️ Partiti</a>
+    <a class="menu_title" href="about.html">🧍 Chi siamo</a>
+    <a class="menu_title" href="contact.html">📧 Contattaci</a>
+</div>
+
+<div id="background_3">
+    <div class="row" style="margin-top: min(20%, 50px)">
+        <img src="../assets/images/candidate.png" id="plogo" alt="logo">
+        <div>
+            <p id="title">
+                Scopri i partiti<br>e le coalizioni
+            </p>
+            <p id="subtitle" style="font-size: max(21px, 1.5vw);">
+                Un piccolo ripasso per votare<br>in modo più consapevole!
+            </p>
+        </div>
+        <div style="width: 5vw; height: 0;"></div>
+    </div>
+</div>
+
+<div class="parties_container">
+    <div class="divider"></div>
+    <img src="../assets/images/cdestra.png" class="cdestra" style="max-width: 60%">
+    <p class="title">Coalizione di centro-destra</p>
+    <p class="pdesc">La coalizione di centro-destra è composta da: Fratelli d'Italia (Giorgia Meloni), Lega (Matteo Salvini), Forza Italia (Silvio Berlusconi) e Noi Moderati (Maurizio Lupi). I quattro partiti si sono accordati per formare un governo di centro-destra, il cui premier sarà il leader del partito che ha ricevuto più voti. I sondaggi attuali indicano: FdI (24.2%), Lega (13.5%), FI (8.1%) e Noi Moderati (1.5%)</p>
+
+    <div class="divider"></div>
+    <img src="../assets/images/csinistra.png" class="cdestra" style="max-width: 35%; min-width: 150px">
+    <p class="title">Coalizione di centro-sinistra</p>
+    <p class="pdesc">La coalizione di centro-sinistra è composta da: Partito Democratico (Enrico Letta), Alleanza Verdi e Sinistra (Angelo Bonelli), Impegno Civico (Luigi di Maio) e +Europa (Emma Bonino). I cinque partiti si sono accordati per formare un governo di centro-sinistra. I sondaggi attuali indicano: PD (21.9%%), Impegno Civico (0.9%), Alleanza Verdi e Sinistra (3.5%) e +Europa (2.2%)</p>
+
+    <div class="divider"></div>
+    <img src="../assets/images/cterzo.png" class="cdestra" style="max-width: 22%; min-width: 100px">
+    <p class="title">Terzo polo</p>
+    <p class="pdesc">Il Terzo Polo è nato dall'unione tra Azione (Carlo Calenda) e Italia Viva (Matteo Renzi). I due partiti si presenteranno alle elezioni come un unico partito di centro con a capo Calenda. I sondaggi attuali li pongono al 5.2%</p>
+
+    <div class="divider"></div>
+    <img src="../assets/images/m5s.png" class="cdestra" style="max-width: 11%; min-width: 50px">
+    <p class="title">Movimento 5 Stelle</p>
+    <p class="pdesc">Il M5S si presenterà alle elezioni come un unico partito con a capo Giuseppe Conte. I sondaggi attuali li pongono al 12.1%</p>
+    <div style="height: 100px"></div>
+</div>
+<div id="menu_obscurer"></div>
+
+</body>
+</html>
