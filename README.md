@@ -12,6 +12,7 @@ In view of the next elections of the Italian Parliament, I decided to summarize 
 
 ![Screenshot (35)](https://github.com/Byazh/Politics/assets/43955533/b4d93532-094f-4301-9bd6-95c9d8be4c2b)
 
-Almost 80k visits
+Half a milllion views on TikTok
 
-![Proof](https://github.com/Byazh/Politics/assets/43955533/fb98e730-0c64-4025-838e-3fee9fba6a9e)
+![photo_2024-02-29_09-56-09](https://github.com/Byazh/Politics/assets/43955533/8d96e0e3-d2a3-4541-9148-69c2ff33fcad)
+
