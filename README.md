@@ -5,4 +5,9 @@ In view of the next elections of the Italian Parliament, I decided to summarize 
 ![Screenshot (25)](https://user-images.githubusercontent.com/43955533/182474954-80a67f4f-d74c-4462-aacb-d3bd86de72f4.png)
 
 
-![Screenshot (26)](https://user-images.githubusercontent.com/43955533/182475088-c86db7d4-e0c9-4f4f-b063-34912bdb6c4a.png)
+
+![Screenshot (34)](https://github.com/Byazh/Politics/assets/43955533/f44e8f6a-6478-48a9-bf1d-582c4af126b8)
+
+
+
+![Screenshot (35)](https://github.com/Byazh/Politics/assets/43955533/b4d93532-094f-4301-9bd6-95c9d8be4c2b)
